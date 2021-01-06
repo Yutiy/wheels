@@ -1,0 +1,16 @@
+{
+  "name": "mini-react",
+  "version": "1.0.0",
+  "description": "mini react",
+  "main": "dist/react.js",
+  "scripts": {
+    "start": "parcel ./index.html"
+  },
+  "keywords": ["mini-react"],
+  "author": "Yutiy <494657028@qq.com>",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.7.0"
+  }
+}
