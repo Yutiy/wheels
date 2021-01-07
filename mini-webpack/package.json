@@ -1,0 +1,33 @@
+{
+  "name": "mini-webpack",
+  "version": "1.0.0",
+  "description": "my mini webpack",
+  "main": "index.js",
+  "bin": {
+    "mypack": "./bin/mypack.js"
+  },
+  "scripts": {
+    "debug": "node --inspect --inspect-brk node_modules/webpack/bin/webpack.js",
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "mime": "^2.4.7",
+    "schema-utils": "^3.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/parser": "^7.12.11",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/traverse": "^7.12.12",
+    "@babel/types": "^7.12.12",
+    "less": "^4.0.0",
+    "tapable": "^2.2.0",
+    "webpack": "^5.11.1",
+    "webpack-cli": "^4.3.1"
+  }
+}
