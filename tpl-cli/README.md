@@ -21,12 +21,12 @@ npm run watch
 
 此时就可以使用 tpl 命令了。
 
-- tpl init vue-template myVue
+- tpl init ts-axios myAxios
 - tpl config get
 - tpl config set type orgs
-- tpl config set registry vuejs-templates
+- tpl config set registry ts-axios
 - tpl config set type users
-- tpl config set registry YvetteLau
+- tpl config set registry Yutiy
 
 ## 发布
 
