@@ -1,0 +1,31 @@
+{
+  "name": "tpl-cli",
+  "version": "1.0.0",
+  "description": "tpl脚手架",
+  "main": "index.js",
+  "bin": {
+    "tpl": "./bin/www"
+  },
+  "scripts": {
+    "compile": "babel src -d dist",
+    "watch": "npm run compile -- --watch",
+    "postinstall": "tpl config set"
+  },
+  "keywords": [
+    "tpi-cli"
+  ],
+  "author": "Yutiy",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "chalk": "^4.1.0",
+    "commander": "^6.2.1",
+    "download-git-repo": "^3.0.2",
+    "ini": "^2.0.0",
+    "inquirer": "^7.3.3",
+    "log-symbols": "^4.0.0",
+    "ora": "^5.2.0"
+  }
+}
