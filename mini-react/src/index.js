@@ -1,20 +1,17 @@
-function createElement( tag, attrs, ...children ) {
-  return {
-    tag,
-    attrs,
-    children
-  }
+import React from './react';
+import ReactDOM from './react-dom';
+
+function tick() {
+  const element = (
+    <div>
+      <h1>Hello, world!</h1>
+      <h2>It is {new Date().toLocaleTimeString()}.</h2>
+    </div>
+  );
+  ReactDOM.render(
+    element,
+    document.getElementById('root')
+  );
 }
 
-// 将上文定义的createElement方法放到对象React中
-const React = {
-  createElement
-}
-
-const element = (
-  <div>
-    hello<span>world!</span>
-  </div>
-);
-
-console.log( element );
+tick();
