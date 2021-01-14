@@ -1,17 +1,25 @@
 import handleAttrs from './handleAttrs';
+import { createComponent, setComponentProps } from '../utils/render';
 
 // 传入虚拟dom节点和真实包裹节点，把虚拟dom节点通过_render方法转换成真实dom节点，然后插入到包裹节点中，这个就是react的初次渲染
 const render = (vnode, container) => {
   return container.appendChild(_render(vnode));
 }
 
-function _render(vnode) {
+export function _render(vnode) {
   if (vnode === undefined || vnode === null || typeof vnode === 'boolean') vnode = '';
   if (typeof vnode === 'number') vnode = String(vnode);
 
   if (typeof vnode === 'string') {
     const textNode = document.createTextNode(vnode);
     return textNode;
+  }
+
+  // hooks
+  if (typeof vnode.tag === 'function') {
+    const component = createComponent(vnode.tag, vnode.attrs);
+    setComponentProps(component, vnode.attrs);
+    return component.base;
   }
 
   const dom = document.createElement(vnode.tag);
