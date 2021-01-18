@@ -25,15 +25,16 @@ class Hello extends React.Component {
       //     count: prevState.count + 1
       //   }
       // });
-      this.setState({ count: this.state.count + 1 });
-      console.log(this.state.count);
+      const { count } = this.state
+      this.setState({ count: count + 1 });
+      console.log(count);
     }
   }
 
   shouldComponentUpdate(nextProps, nextState) {
     if (nextState.count > 5) {
-      alert('shouldComponentUpdate中限制了更新');
-      return false;
+      // alert('shouldComponentUpdate中限制了更新');
+      // return false;
     }
     return true;
   }

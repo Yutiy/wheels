@@ -1,7 +1,7 @@
 import { renderComponent } from '../react-dom/component';
 
 /**
- * 队列   先进先出 后进后出 ～
+ * 队列 先进先出 后进后出～
  * @param {Array:Object} setStateQueue  抽象队列 每个元素都是一个key-value对象 key:对应的stateChange value:对应的组件
  * @param {Array:Component} renderQueue  抽象需要更新的组件队列 每个元素都是Component
  */

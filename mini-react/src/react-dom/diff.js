@@ -59,12 +59,10 @@ export default function diff(dom, vnode, container) {
   }
 
   if (vnode.attrs) {
-    console.log(out, vnode.attrs)
     diffAttributes(out, vnode.attrs)
   }
 
   if (vnode.children && vnode.children.length) {
-    console.log(vnode)
     diffChildren(out, vnode.children)
   }
 
